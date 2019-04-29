@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before-install:
+  - docker build -t bretstateham/docker-react -f Docerfile.dev .
+
+script:
+  - docker run bretstateham/docker-react npm run test -- --coverage
