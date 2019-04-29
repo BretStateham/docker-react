@@ -3,7 +3,7 @@ services:
   - docker
 
 before-install:
-  - docker build -t bretstateham/docker-react -f Docerfile.dev .
+  - docker build -t bsdrdev -f Docerfile.dev .
 
 script:
-  - docker run bretstateham/docker-react npm run test -- --coverage
+  - docker run bsdrdev npm run test -- --coverage
